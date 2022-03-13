@@ -73,4 +73,3 @@ fabric.properties
 #Pycharm
 .idea
 venv
-config.py
