@@ -12,16 +12,3 @@ WIP
 WIP
 ## Notes
 WIP
-## TODO
-**This repository is still under development.**
-Finished, usable Docker containers will be available later via GitHub Packages. This TODO list gives an impression of the current development state.
-
- - [ ] Create basic structure for automatic Docker build environment
-	 - [ ] Dockerfile
-	 - [ ] Docker entrypoint
-	 - [ ] Usage instructions and important notes
- - [ ] Integrate `twitch-recorder.py`
-	 - [ ] Satisfy Python requirements
-	 - [ ] Set up environment for the script
- - [ ] Enable automatic image build with GitHub Actions
- - [ ] Publish Docker image in GitHub Packages
