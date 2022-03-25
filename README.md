@@ -54,4 +54,6 @@ services:
 ```
 
 ## Notes
-None at the moment - have fun.
+Open TODOs for future improvements:
+- [ ] Run process as non-root user
+- [ ] Add "latest" tag
