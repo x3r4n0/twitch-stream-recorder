@@ -3,14 +3,14 @@ A Docker container to automatically record Twitch streams.
 
 ## Description
 This repository hosts the source code for a Docker container that can automatically record livestreams from Twitch as they go live.
-The main component ist from [Ancalentari Twitch Stream Recorder](https://github.com/ancalentari/twitch-stream-recorder).
+The main component is from [Ancalentari Twitch Stream Recorder](https://github.com/ancalentari/twitch-stream-recorder).
 
 ## Requirements
 To run this container and record streams from Twitch,
 you need to register a dummy app and get a client_id and client_secret. Both is explained in the setup section.
 
 ## Setup
-Create a `config.py` file in a directory of your choice (you will need to mount this file into the container later:
+Create a `config.py` file in a directory of your choice (you will need to mount this file into the container later):
 
 ```bash
 root_path = "/opt/recordings"
@@ -36,8 +36,8 @@ docker run \
 The options in this command:  
 `--rm` Deletes the container, once it stops. (TODO: Can be removed from documentation at some point, won't be necessary anymore.)  
 `-v /path/to/config.py:/opt/config.py` Map the created config file to a defined location in the container, so the python script can find it.  
-`-v /path/to/recordings:/opt/recordings` Map a folder of your choice to a defined location in the container. This is the placed where all recordings will be saved to.  
-`ghcr.io/stefomat/twitch-stream-recorder:master` Use the "master" tag for the latest version, that's the GitHub branch from which the Docker images will be built from.
+`-v /path/to/recordings:/opt/recordings` Map a folder of your choice to a defined location in the container. This is the place where all recordings will be saved to.  
+`ghcr.io/stefomat/twitch-stream-recorder:master` Use the "master" tag for the latest version, that's the GitHub branch from which the Docker images will be built.
 
 You can also run it as a `docker-compose` setup.
 
