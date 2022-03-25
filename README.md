@@ -1,4 +1,4 @@
-# docker-twitch-recorder
+# twitch-stream-recorder
 A Docker container to automatically record Twitch streams.
 
 ## Description
