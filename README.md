@@ -26,11 +26,17 @@ client_secret = "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz"
 
 ## Usage
 Start the container with the following `docker run` command:  
-`docker run --rm -v /opt/docker-twitch-recorder/config.py:/opt/config.py -v /opt/docker-twitch-recorder/recordings:/opt/recordings/ ghcr.io/stefomat/twitch-stream-recorder:master`  
+```bash
+docker run \
+   --rm \
+   -v /path/to/config.py:/opt/config.py \
+   -v /path/to/recordings:/opt/recordings \
+   ghcr.io/stefomat/twitch-stream-recorder:master
+```
 The options in this command:  
 `--rm` Deletes the container, once it stops. (TODO: Can be removed from documentation at some point, won't be necessary anymore.)  
-`-v /opt/docker-twitch-recorder/config.py:/opt/config.py` Map the created config file to a defined location in the container, so the python script can find it.  
-`-v /opt/docker-twitch-recorder/recordings:/opt/recordings/` Map a folder of your choice to a defined location in the container. This is the placed where all recordings will be saved to.  
+`-v /path/to/config.py:/opt/config.py` Map the created config file to a defined location in the container, so the python script can find it.  
+`-v /path/to/recordings:/opt/recordings` Map a folder of your choice to a defined location in the container. This is the placed where all recordings will be saved to.  
 `ghcr.io/stefomat/twitch-stream-recorder:master` Use the "master" tag for the latest version, that's the GitHub branch from which the Docker images will be built from.
 
 ## Notes
