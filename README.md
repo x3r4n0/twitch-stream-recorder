@@ -39,5 +39,21 @@ The options in this command:
 `-v /path/to/recordings:/opt/recordings` Map a folder of your choice to a defined location in the container. This is the placed where all recordings will be saved to.  
 `ghcr.io/stefomat/twitch-stream-recorder:master` Use the "master" tag for the latest version, that's the GitHub branch from which the Docker images will be built from.
 
+You can also run it as a `docker-compose` setup.
+
+```bash
+---
+version: "2"
+
+services:
+  twitch-stream-recorder:
+    image: ghcr.io/stefomat/twitch-stream-recorder:master
+    container_name: twitch-stream-recorder
+    volumes:
+      - /path/to/config.py:/opt/config.py
+      - /path/to/recordings:/opt/recordings
+    restart: unless-stopped
+```
+
 ## Notes
 None at the moment - have fun.
