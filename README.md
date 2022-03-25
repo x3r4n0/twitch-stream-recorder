@@ -12,7 +12,7 @@ you need to register a dummy app and get a client_id and client_secret. Both is 
 ## Setup
 Create a `config.py` file in a directory of your choice (you will need to mount this file into the container later:
 
-```properties
+```bash
 root_path = "/opt/recordings"
 username = "gronkh"
 client_id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
