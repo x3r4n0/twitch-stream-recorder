@@ -1,5 +1,4 @@
-FROM python:3.9-slim
-
+FROM python:3-slim
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends --no-install-suggests -y ffmpeg
 
