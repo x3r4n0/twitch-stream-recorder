@@ -57,3 +57,4 @@ services:
 Open TODOs for future improvements:
 - [ ] Run process as non-root user
 - [ ] Add "latest" tag
+- [ ] Switch to alpine based images
