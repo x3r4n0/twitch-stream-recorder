@@ -58,3 +58,6 @@ Open TODOs for future improvements:
 - [ ] Run process as non-root user
 - [ ] Add "latest" tag
 - [ ] Switch to alpine based images
+- [ ] Run GitHub Action on a regular base
+- [ ] Separate container tags for the regular built images?
+- [ ] How many versions of the image do i want to store on GitHub?
