@@ -1,26 +1,19 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-
-name: Create and publish a Docker image
+name: Build and push Docker image from devel
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - 'devel'
 
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
 
 jobs:
-  build-and-push-image:
+  docker:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
-
     steps:
+
       - name: Checkout repository
         uses: actions/checkout@v3
 
