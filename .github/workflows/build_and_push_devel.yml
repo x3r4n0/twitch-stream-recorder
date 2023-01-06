@@ -1,6 +1,7 @@
 name: Build and push Docker image from devel
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - 'devel'
