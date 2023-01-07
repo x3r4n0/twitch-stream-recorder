@@ -1,6 +1,6 @@
-FROM python:3-slim
+FROM python:3-alpine
 
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends --no-install-suggests -y ffmpeg
+RUN apk update && apk upgrade && apk add ffmpeg
 
 RUN python -m pip install --no-cache-dir --upgrade pip
 RUN python -m pip install --no-cache-dir --upgrade streamlink requests
