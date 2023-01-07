@@ -1,10 +1,14 @@
 FROM python:3-alpine
 
-RUN apk update && apk upgrade && apk add ffmpeg
+RUN apk update && apk upgrade
+
+RUN apk add --no-cache tini
+
+RUN apk add --no-cache ffmpeg
 
 RUN python -m pip install --no-cache-dir --upgrade pip
 RUN python -m pip install --no-cache-dir --upgrade streamlink requests
 
 COPY ./twitch-recorder.py /opt
 
-CMD ["python", "/opt/twitch-recorder.py"]
+CMD ["/sbin/tini", "--", "python", "/opt/twitch-recorder.py"]
