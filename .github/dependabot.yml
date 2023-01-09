@@ -2,12 +2,14 @@ version: 2
 updates:
 
   - package-ecosystem: "github-actions"
+    target-branch: "testing"
     directory: "/"
     schedule:
       interval: "weekly"
 
   # Enable version updates for Docker
   - package-ecosystem: "docker"
+    target-branch: "testing"
     directory: "/"
     schedule:
       interval: "weekly"
