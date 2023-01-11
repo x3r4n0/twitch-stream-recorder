@@ -19,7 +19,7 @@ The container needs a few configuration parameters. These are:
 ## Usage
 Start the container with the following `docker run` command:  
 ```bash
-docker run \
+docker run -d \
    -e USERNAME=your_favourite_streamer \
    -e CLIENT_ID=your_client_id \
    -e CLIENT_SECRET=your_client_secret \
