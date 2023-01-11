@@ -1,17 +1,17 @@
 #!/bin/sh
 
 # Ensure presence of all needed variables
-if [[ -z $USERNAME ]]; then
+if [ -z $USERNAME ]; then
   echo "USERNAME not given, exit."
   exit 1
 fi
 
-if [[ -z $CLIENT_ID ]]; then
+if [ -z $CLIENT_ID ]; then
   echo "CLIENT_ID not given, exit."
   exit 1
 fi
 
-if [[ -z $CLIENT_SECRET ]]; then
+if [ -z $CLIENT_SECRET ]; then
   echo "CLIENT_SECRET not given, exit."
   exit 1
 fi
