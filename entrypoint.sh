@@ -11,6 +11,7 @@ root_path = "/opt/recordings"
 username = "${USERNAME}"
 client_id = "${CLIENT_ID}"
 client_secret = "${CLIENT_SECRET}"
+auth_token = "${AUTH_TOKEN}"
 EOF
 
 # Hand off to the CMD

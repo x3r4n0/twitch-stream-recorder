@@ -15,6 +15,7 @@ The container needs a few configuration parameters. These are:
 `USERNAME`      - name of the streamer you want to record (Change this accordingly!)  
 `CLIENT_ID`     - you can grab this from [here](https://dev.twitch.tv/console/apps) once you register your application (Replace with your own!)  
 `CLIENT_SECRET` - you generate this [here](https://dev.twitch.tv/console/apps) as well, for your registered application (Replace with your own!)
+`AUTH_TOKEN`    - optionally your OAuth Token to prevent ad breaks if you're subscribed to the streamer
 
 ## Usage
 Start the container with the following `docker run` command:  
@@ -23,6 +24,7 @@ docker run -d \
    -e USERNAME=your_favourite_streamer \
    -e CLIENT_ID=your_client_id \
    -e CLIENT_SECRET=your_client_secret \
+   -e AUTH_TOKEN=your_oauth_token_cookie \
    -v /path/to/recordings:/opt/recordings \
    ghcr.io/stefomat/twitch-stream-recorder:master
 ```
@@ -44,6 +46,7 @@ services:
       - USERNAME=your_favourite_streamer
       - CLIENT_ID=your_client_id
       - CLIENT_SECRET=your_client_secret
+      - AUTH_TOKEN=your_oauth_token_cookie
     volumes:
       - /path/to/recordings:/opt/recordings
     restart: unless-stopped
