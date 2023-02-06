@@ -6,9 +6,9 @@ RUN apk add --no-cache ffmpeg=5.1.2-r1
 
 RUN python -m pip install --no-cache-dir --upgrade streamlink==5.2.1
 
-COPY ./twitch-recorder.py /opt
+COPY twitch-recorder.py /opt/
 
-COPY entrypoint.sh /entrypoint.sh
+COPY entrypoint.sh /
 RUN chmod 755 /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
